@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Primeros Pasos Arduino : Primer ejemplo con Arduino paso a paso">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Primeros Pasos Arduino</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jecrespo/PrimerosPasosArduino">View on GitHub</a>
+
+          <h1 id="project_title">Primeros Pasos Arduino</h1>
+          <h2 id="project_tagline">Primer ejemplo con Arduino paso a paso</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jecrespo/PrimerosPasosArduino/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jecrespo/PrimerosPasosArduino/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="ejemplo-paso-a-paso-para-los-que-empiezan-con-arduino" class="anchor" href="#ejemplo-paso-a-paso-para-los-que-empiezan-con-arduino" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ejemplo paso a paso para los que empiezan con Arduino</h3>
+
+<p>Vamos a simular un sistema de alarma de forma que leo por una entrada y cuando detecto 0 voltios, ejecuto una acción sobre una salida indicando que tengo una alarma, por ejemplo una sirena, un SMS o enciendo una luz de emergencia.</p>
+
+<p>La entrada será el pin digital 7 y la salida el led integrado en arduino accesible desde el pin digital 13.</p>
+
+<h3>
+<a id="pasos-a-realizar" class="anchor" href="#pasos-a-realizar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pasos a realizar</h3>
+
+<table>
+<thead>
+<tr>
+<th>Paso/Commit</th>
+<th>Tarea</th>
+<th>Errores Detectados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Leer el pin digital 7 y es 0 enciendo el led intergado en el pin 13, sino lo apago</td>
+<td>Se ve parpadear o reducir la luminosidad del led cuando el pin está al aire no conectado a GND o 5V</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Poner el pin 7 en modo INPUT_PULLUP</td>
+<td>Ahora si no hay nada conectado está apagado y poner el pin 7 a masa se enciende el led</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Simulando la lectura de un relé, sacar por puerto serie <strong>ALARMA</strong> cuando ponga GND el pin 7</td>
+<td>Manda alarma continuamente no al detectar un cambio en el estado</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Añadir una variable con el estado de alarma y compararlo el estado anterior para madar <strong>ALARMA</strong> o <strong>RECUPERACION ALARMA</strong>
+</td>
+<td>Se observan rebotes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Añadir un delay de 100ms al final del loop</td>
+<td><strong>¡¡FUNCIONA!!</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="conclusión" class="anchor" href="#conclusi%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conclusión</h3>
+
+<p>Cuando quiero detectar cambios de estado debo guardar en una variable el estado y comparar con el estado actual y cuando hay un cambio ejecuto la acción correspondiente.</p>
+
+<p>No es necesario hacer digitalWrite en cada loop, es mejor hacerlo cuando se detecte el cambio de estado que lo dispara</p>
+
+<h3>
+<a id="pasos-dados-y-cambios-en-el-código" class="anchor" href="#pasos-dados-y-cambios-en-el-c%C3%B3digo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pasos dados y cambios en el código</h3>
+
+<p>Ver: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commits/master">https://github.com/jecrespo/PrimerosPasosArduino/commits/master</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Primeros Pasos Arduino maintained by <a href="https://github.com/jecrespo">jecrespo</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
