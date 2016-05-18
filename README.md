@@ -14,3 +14,6 @@ Ejemplo paso a paso para los que empiezan con Arduino
 Cuando quiero detectar cambios de estado debo guardar en una variable el estado y comparar con el estado actual y cuando hay un cambio ejecuto la acción correspondiente.
 
 No es necesario hacer digitalWrite en cada loop, es mejor hacerlo cuando se detecte el cambio de estado que lo dispara
+
+###Pasos dados y cambios en el código
+https://github.com/jecrespo/PrimerosPasosArduino/commits/master
