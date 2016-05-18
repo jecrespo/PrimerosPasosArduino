@@ -24,4 +24,5 @@ void loop() {
       Serial.println("ALARMA RECUPERADA");
     }
   }
+  delay(100);
 }
