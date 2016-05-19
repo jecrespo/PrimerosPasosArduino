@@ -47,34 +47,40 @@
 <th>Paso/Commit</th>
 <th>Tarea</th>
 <th>Errores Detectados</th>
+<th>Código</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Leer el pin digital 7 y es 0 enciendo el led intergado en el pin 13, sino lo apago</td>
+<td>Leer el pin digital 7 y es 0 enciendo el led integrado en el pin 13, sino lo apago</td>
 <td>Se ve parpadear o reducir la luminosidad del led cuando el pin está al aire no conectado a GND o 5V</td>
+<td><a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/cee15d7fbe381270e37f08566f0e9b4ca415b68e">Código Paso 1</a></td>
 </tr>
 <tr>
 <td>2</td>
 <td>Poner el pin 7 en modo INPUT_PULLUP</td>
 <td>Ahora si no hay nada conectado está apagado y poner el pin 7 a masa se enciende el led</td>
+<td><a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/ff0681acb3ec1b42ebb493b6f6aa4c66e36688bf">Código Paso 2</a></td>
 </tr>
 <tr>
 <td>3</td>
 <td>Simulando la lectura de un relé, sacar por puerto serie <strong>ALARMA</strong> cuando ponga GND el pin 7</td>
 <td>Manda alarma continuamente no al detectar un cambio en el estado</td>
+<td><a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/49f546c9dafe67e34ba9d0df30a4680add36a483">Código Paso 3</a></td>
 </tr>
 <tr>
 <td>4</td>
 <td>Añadir una variable con el estado de alarma y compararlo el estado anterior para madar <strong>ALARMA</strong> o <strong>RECUPERACION ALARMA</strong>
 </td>
 <td>Se observan rebotes</td>
+<td><a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/d1f232639d6bfe5daa92efaeac9b25b7ab43b733">Código Paso 4</a></td>
 </tr>
 <tr>
 <td>5</td>
 <td>Añadir un delay de 100ms al final del loop</td>
 <td><strong>¡¡FUNCIONA!!</strong></td>
+<td><a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/f26bf39d9a2e3834e2d9076546b1066abf12c102">Código Paso 5</a></td>
 </tr>
 </tbody>
 </table>
@@ -95,19 +101,6 @@
 <a id="pasos-dados-y-cambios-en-el-código" class="anchor" href="#pasos-dados-y-cambios-en-el-c%C3%B3digo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pasos dados y cambios en el código</h3>
 
 <p>Ver: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commits/master">https://github.com/jecrespo/PrimerosPasosArduino/commits/master</a></p>
-
-<ul>
-<li>Paso 1: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/cee15d7fbe381270e37f08566f0e9b4ca415b68e">https://github.com/jecrespo/PrimerosPasosArduino/commit/cee15d7fbe381270e37f08566f0e9b4ca415b68e</a>
-</li>
-<li>Paso 2: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/ff0681acb3ec1b42ebb493b6f6aa4c66e36688bf">https://github.com/jecrespo/PrimerosPasosArduino/commit/ff0681acb3ec1b42ebb493b6f6aa4c66e36688bf</a>
-</li>
-<li>Paso 3: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/49f546c9dafe67e34ba9d0df30a4680add36a483">https://github.com/jecrespo/PrimerosPasosArduino/commit/49f546c9dafe67e34ba9d0df30a4680add36a483</a>
-</li>
-<li>Paso 4: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/d1f232639d6bfe5daa92efaeac9b25b7ab43b733">https://github.com/jecrespo/PrimerosPasosArduino/commit/d1f232639d6bfe5daa92efaeac9b25b7ab43b733</a>
-</li>
-<li>Paso 5: <a href="https://github.com/jecrespo/PrimerosPasosArduino/commit/f26bf39d9a2e3834e2d9076546b1066abf12c102">https://github.com/jecrespo/PrimerosPasosArduino/commit/f26bf39d9a2e3834e2d9076546b1066abf12c102</a>
-</li>
-</ul>
       </section>
     </div>
 
